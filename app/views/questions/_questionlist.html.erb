@@ -1,0 +1,11 @@
+<%= render :partial => "question", :locals => {:question => questionlist} %>
+<table>
+  <tr>
+    <td><%= link_to 'Show', questionlist %></td>
+    <td><%= link_to 'Edit', edit_question_path(questionlist) %></td>
+    <td><%= link_to 'Destroy', questionlist, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+</table>
+<p />
+
+

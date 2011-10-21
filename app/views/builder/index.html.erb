@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Lab Builder</title>
+  <%= stylesheet_link_tag "latex", :media => "all" %>
+</head>
+<body>
+
+<h1>Lab Builder</h1>
+
+<% form_tag '/builder', :method => 'get' do %>
+  <p>
+  <%= text_field_tag :search, params[:search] %>
+  <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %> 
+
+<h2>Search Results</h2>
+<%= render :partial => "searchquestion", :collection => @searchresults %>
+
+<h2>Selected for Draft</h2>
+<%= render :partial => "draftquestion", :collection => @draft.questions %>
+<p />
+
+<div>
+  <table>
+    <tr><td><%= button_to "Finalize", :action => :finalize %></td><td><%= button_to "Clear Draft", :action => :clear_draft %></td></tr>
+  </table>
+</div>
+
+</body>
+</html>

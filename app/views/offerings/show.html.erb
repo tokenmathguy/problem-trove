@@ -1,0 +1,18 @@
+<p>
+  <b>Course:</b>
+  <%=h @offering.course %>
+</p>
+
+<p>
+  <b>Schoolquarter:</b>
+  <%=h @offering.schoolquarter %>
+</p>
+
+<p>
+  <b>Section:</b>
+  <%=h @offering.section %>
+</p>
+
+
+<%= link_to 'Edit', edit_offering_path(@offering) %> |
+<%= link_to 'Back', offerings_path %>

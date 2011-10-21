@@ -1,0 +1,28 @@
+<p>
+  <b>Question:</b>
+  <%=h @solution.question %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @solution.user %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @solution.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @solution.body %>
+</p>
+
+<p>
+  <b>Solution status:</b>
+  <%=h @solution.solution_status %>
+</p>
+
+
+<%= link_to 'Edit', edit_solution_path(@solution) %> |
+<%= link_to 'Back', solutions_path %>

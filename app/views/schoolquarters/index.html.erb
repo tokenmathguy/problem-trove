@@ -1,0 +1,24 @@
+<h1>Listing schoolquarters</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Schoolyear</th>
+    <th>Quarter</th>
+  </tr>
+
+<% @schoolquarters.each do |schoolquarter| %>
+  <tr>
+    <td><%=h schoolquarter.name %></td>
+    <td><%=h schoolquarter.schoolyear %></td>
+    <td><%=h schoolquarter.quarter %></td>
+    <td><%= link_to 'Show', schoolquarter %></td>
+    <td><%= link_to 'Edit', edit_schoolquarter_path(schoolquarter) %></td>
+    <td><%= link_to 'Destroy', schoolquarter, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New schoolquarter', new_schoolquarter_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+Beginner:
+  name: "Beginner" 
+  ordinal: 1
+
+Novice:
+  name: "Novice"
+  ordinal: 2
+
+Intermediate: 
+  name: "Intermediate"
+  ordinal: 3
+
+Advanced: 
+  name: "Advanced"
+  ordinal: 4
+
+Expert: 
+  name: "Expert"
+  ordinal: 5

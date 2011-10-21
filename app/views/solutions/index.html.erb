@@ -1,0 +1,28 @@
+<h1>Listing solutions</h1>
+
+<table>
+  <tr>
+    <th>Question</th>
+    <th>User</th>
+    <th>Title</th>
+    <th>Body</th>
+    <th>Solution status</th>
+  </tr>
+
+<% @solutions.each do |solution| %>
+  <tr>
+    <td><%=h solution.question %></td>
+    <td><%=h solution.user %></td>
+    <td><%=h solution.title %></td>
+    <td><%=h solution.body %></td>
+    <td><%=h solution.solution_status %></td>
+    <td><%= link_to 'Show', solution %></td>
+    <td><%= link_to 'Edit', edit_solution_path(solution) %></td>
+    <td><%= link_to 'Destroy', solution, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New solution', new_solution_path %>

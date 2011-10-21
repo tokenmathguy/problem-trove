@@ -1,0 +1,18 @@
+<p>
+  <b>Name:</b>
+  <%=h @schoolquarter.name %>
+</p>
+
+<p>
+  <b>Schoolyear:</b>
+  <%=h @schoolquarter.schoolyear %>
+</p>
+
+<p>
+  <b>Quarter:</b>
+  <%=h @schoolquarter.quarter %>
+</p>
+
+
+<%= link_to 'Edit', edit_schoolquarter_path(@schoolquarter) %> |
+<%= link_to 'Back', schoolquarters_path %>

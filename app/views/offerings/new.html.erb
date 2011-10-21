@@ -1,0 +1,23 @@
+<h1>New offering</h1>
+
+<% form_for(@offering) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :course %><br />
+    <%= f.text_field :course %>
+  </p>
+  <p>
+    <%= f.label :schoolquarter %><br />
+    <%= f.text_field :schoolquarter %>
+  </p>
+  <p>
+    <%= f.label :section %><br />
+    <%= f.text_field :section %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', offerings_path %>

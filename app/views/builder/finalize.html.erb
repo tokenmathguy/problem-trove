@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>Lab Builder</title>
+  <%= stylesheet_link_tag "latex", :media => "all" %>
+</head>
+<body>
+
+<h1>Lab Builder</h1>
+
+<% form_for :lab, :url => {:action => :save_draft} do |form| %>
+  <div>
+  <%= form.label :title, "Title: " %>
+  <%= form.text_field :title, :size => 64 %>
+  </div>
+
+  <div>
+  <%= collection_select :offering, :id, @offerings, :id, :display_name %>
+  </div>
+
+  <%= submit_tag "Save", :class => "submit" %>
+<% end %> 
+
+<h2>Draft</h2>
+<%= render :partial => "draftquestion", :collection => @draft.questions %>
+
+<p />
+
+<%= button_to "Edit Draft", :action => :edit_draft %></td></tr>
+
+</body>
+</html>

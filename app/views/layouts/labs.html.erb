@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+  <title>Labs: <%= controller.action_name %></title>
+<!-- START:stylesheet -->
+  <%= stylesheet_link_tag "workshop", :media => "all" %>
+  <%= javascript_include_tag :defaults %>
+<!-- END:stylesheet -->
+</head>
+<body id="builder">
+  <div id="banner">
+    <%= image_tag("logo.png") %>
+    <%= @page_title || "Workshop Generator" %>
+  </div>
+  <div id="columns">
+    <div id="side">
+      <a href="/">Home</a><br />
+      <a href="/builder">Builder</a><br />
+      <a href="/courses">Courses</a><br />
+      <a href="/labs">Labs</a><br />
+      <a href="/courses">Offerings</a><br />
+      <a href="/questions">Questions</a><br />
+    </div>
+      <% if flash[:notice] %>
+        <div id="notice">
+          <%= flash[:notice] %>
+        </div>
+      <% end %>
+
+    <div id="main">
+      <%= yield :layout %>
+    </div>
+  </div>
+</body>
+</html>

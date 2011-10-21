@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+Negative:
+  name: "Negative" 
+  ordinal: -1
+
+None:
+  name: "No" 
+  ordinal: 0
+
+Nominal:
+  name: "Nominal" 
+  ordinal: 1
+
+Moderate:
+  name: "Moderate" 
+  ordinal: 2
+
+High:
+  name: "High" 
+  ordinal: 3

@@ -1,0 +1,30 @@
+<p>
+  <b>Offering:</b>
+  <%=h @lab.offering.display_name %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @lab.user.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @lab.title %>
+</p>
+
+<p>
+  <b>Week:</b>
+  <%=h @lab.week %>
+</p>
+
+<br />
+<%= link_to 'Download LaTeX', :action => :download_latex, :id => @lab.id %> |
+<%= link_to 'Download PDF', :action => :download_pdf, :id => @lab.id %> 
+<br />
+
+<h3>Lab questions</h3>
+<%= render :partial => "question", :collection => @lab.questions %>
+
+<! -- %= link_to 'Edit', edit_lab_path(@lab) % -->
+<! --%= link_to 'Back', labs_path % -->

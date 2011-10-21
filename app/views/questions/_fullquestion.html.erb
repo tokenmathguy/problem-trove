@@ -1,0 +1,17 @@
+<%= render :partial => "question" %>
+
+<p>
+  <b>User:</b>
+  <%=h @question.user.name %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <p />
+  <%=h @question.body %>
+</p>
+
+<p>
+  <b>Question status:</b>
+  <%=h @question.question_status %>
+</p>

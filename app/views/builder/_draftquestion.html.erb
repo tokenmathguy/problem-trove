@@ -1,0 +1,2 @@
+<%= render :partial => "questions/question", :locals => {:question => draftquestion} %>
+<%= button_to("Remove", :action => :remove_question, :id => draftquestion.id) %>

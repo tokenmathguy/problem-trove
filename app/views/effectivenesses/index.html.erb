@@ -1,0 +1,22 @@
+<h1>Listing effectivenesses</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Ordinal</th>
+  </tr>
+
+<% @effectivenesses.each do |effectiveness| %>
+  <tr>
+    <td><%=h effectiveness.name %></td>
+    <td><%=h effectiveness.ordinal %></td>
+    <td><%= link_to 'Show', effectiveness %></td>
+    <td><%= link_to 'Edit', edit_effectiveness_path(effectiveness) %></td>
+    <td><%= link_to 'Destroy', effectiveness, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New effectiveness', new_effectiveness_path %>

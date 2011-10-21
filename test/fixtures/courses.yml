@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+tcss143wk:
+  name: "tcss143 workshop"
+  code: "tcss143wk"
+
+tcss321wk:
+  name: "tcss321 workshop"
+  code: "tcss321wk"
+
+tcss342wk:
+  name: "tcss342 workshop"
+  code: "tcss342wk"
+
+tcss343wk:
+  name: "tcss343 workshop"
+  code: "tcss343wk"

@@ -1,0 +1,56 @@
+<h1>Editing user</h1>
+
+<% form_for(@user) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :login %><br />
+    <%= f.text_field :login %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :crypted_password %><br />
+    <%= f.text_field :crypted_password %>
+  </p>
+  <p>
+    <%= f.label :salt %><br />
+    <%= f.text_field :salt %>
+  </p>
+  <p>
+    <%= f.label :remember_token %><br />
+    <%= f.text_field :remember_token %>
+  </p>
+  <p>
+    <%= f.label :remember_token_expires_at %><br />
+    <%= f.datetime_select :remember_token_expires_at %>
+  </p>
+  <p>
+    <%= f.label :activation_code %><br />
+    <%= f.text_field :activation_code %>
+  </p>
+  <p>
+    <%= f.label :activated_at %><br />
+    <%= f.datetime_select :activated_at %>
+  </p>
+  <p>
+    <%= f.label :password_reset_code %><br />
+    <%= f.text_field :password_reset_code %>
+  </p>
+  <p>
+    <%= f.label :enabled %><br />
+    <%= f.check_box :enabled %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @user %> |
+<%= link_to 'Back', users_path %>

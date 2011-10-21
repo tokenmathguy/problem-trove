@@ -1,0 +1,20 @@
+<h1>Editing effectiveness</h1>
+
+<% form_for(@effectiveness) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :ordinal %><br />
+    <%= f.text_field :ordinal %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @effectiveness %> |
+<%= link_to 'Back', effectivenesses_path %>

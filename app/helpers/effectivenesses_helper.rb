@@ -1,0 +1,2 @@
+module EffectivenessesHelper
+end

@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  offering: 
+  title: MyString
+  week: 1
+
+two:
+  offering: 
+  title: MyString
+  week: 1

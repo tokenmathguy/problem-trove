@@ -1,0 +1,24 @@
+<h1>Listing offerings</h1>
+
+<table>
+  <tr>
+    <th>Course</th>
+    <th>Schoolquarter</th>
+    <th>Section</th>
+  </tr>
+
+<% @offerings.each do |offering| %>
+  <tr>
+    <td><%=h offering.course %></td>
+    <td><%=h offering.schoolquarter %></td>
+    <td><%=h offering.section %></td>
+    <td><%= link_to 'Show', offering %></td>
+    <td><%= link_to 'Edit', edit_offering_path(offering) %></td>
+    <td><%= link_to 'Destroy', offering, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New offering', new_offering_path %>

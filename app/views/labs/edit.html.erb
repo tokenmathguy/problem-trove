@@ -1,0 +1,28 @@
+<h1>Editing lab</h1>
+
+<% form_for(@lab) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :offering %><br />
+    <%= f.text_field :offering %>
+  </p>
+  <p>
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </p>
+  <p>
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :week %><br />
+    <%= f.text_field :week %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @lab %> |
+<%= link_to 'Back', labs_path %>
